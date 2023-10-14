@@ -1,0 +1,128 @@
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap");
+@import "variable";
+
+// global styling
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $primary-color;
+}
+h2 {
+  margin: 25px 0;
+  font-family: $font-stack;
+  color: white;
+}
+p {
+  color: $seconder-color;
+  margin: 10px 0;
+}
+h3 {
+  color: $seconder-color;
+  font-weight: bolder;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+// start header
+header {
+  background-color: $primary-color;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0;
+  h1 {
+    font-family: $font-stack;
+    a {
+      text-decoration: none;
+      font-weight: bolder;
+      font-size: 60px;
+      color: $seconder-color;
+    }
+  }
+
+  nav {
+    ul {
+      @include UlStyle;
+      li {
+        a {
+          text-decoration: none;
+          color: $seconder-color;
+          border-right: 1px solid $seconder-color;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}
+// end header
+//  start landing
+.landing {
+  background-color: $seconder-color;
+  height: 65vh;
+  .text {
+    margin-bottom: 25px;
+    ul {
+      @include UlStyle;
+      li {
+        color: #659b8f;
+        text-shadow: 5px 0 5px #659b8f;
+      }
+    }
+  }
+  .image {
+    @include GridImage;
+    div {
+      img {
+        @include Size(100%, 45%);
+      }
+    }
+  }
+}
+//  end landing
+//  start Feature
+.features {
+  padding: 2rem 8rem;
+  .feature-one {
+    @include GridImage;
+    border-bottom: 1px solid rgba($color: $seconder-color, $alpha: 0.5);
+    div {
+      img {
+        @include Size(100%, 200px);
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  .featureBox {
+    .Boxs {
+      @include GridImage(250px);
+      border-bottom: 1px solid rgba($color: $seconder-color, $alpha: 0.5);
+      .Box {
+        .image-box {
+          img {
+            @include Size(60%, 150px);
+            border: 3px solid $seconder-color;
+          }
+        }
+      }
+    }
+  }
+}
+//  end Feature
+//  start footer
+.Footer {
+  background-color: $seconder-color;
+  ul {
+    @include UlStyle;
+    li {
+      font-family: $font-stack;
+      color: $primary-color;
+      font-size: 25px;
+      font-weight: bolder;
+    }
+  }
+}
+//  start footer

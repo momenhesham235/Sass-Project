@@ -1,0 +1,21 @@
+// variable
+$font-stack: "Dancing Script", cursive;
+$primary-color: #cf22af;
+$seconder-color: #fff;
+
+// Mixin
+@mixin UlStyle() {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 2rem 10rem;
+}
+@mixin GridImage($min: 450px) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($min, 1fr));
+  gap: 60px;
+}
+@mixin Size($width, $height) {
+  width: $width;
+  height: $height;
+}
